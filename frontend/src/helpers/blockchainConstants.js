@@ -35,7 +35,7 @@ const networkNames = {
 };
 
 const gameAddress = {
-    '0x1bb': "0x1887bBf8523785D7e0cB2E70149EFdfcCebdec60"
+    '0x1bb': "0x2DD5E2A0c6d0c4fFBeDf02A9b684e39a43373b9D"
 };
 
 const supportedChainIds = ["0x1bb"];

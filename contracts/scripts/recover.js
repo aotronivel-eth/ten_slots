@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const contractAddress = "0x1887bBf8523785D7e0cB2E70149EFdfcCebdec60";
+  const contractAddress = "0x2DD5E2A0c6d0c4fFBeDf02A9b684e39a43373b9D";
   const [player] = await hre.ethers.getSigners();
   const Slots = await hre.ethers.getContractFactory("Slots");
   const slots = Slots.attach(contractAddress);

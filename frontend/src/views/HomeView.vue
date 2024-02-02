@@ -25,6 +25,11 @@ const getLightStyle = (n) => {
 const goToTen = () => {
   window.open('https://ten.xyz/', '_blank');
 }
+
+const goToTengateway = () => {
+  window.open('https://testnet.ten.xyz/', '_blank');
+}
+
 </script>
 
 <template>
@@ -55,7 +60,7 @@ const goToTen = () => {
               <div class="flex-column-center full-width-and-height" v-if="gameStore.transactionStatus == ''">
                 <div class="message">{{ gameStore.transactionMessage }}</div>
               </div>
-              <div id="flex-column-center full-width-and-height" v-if="gameStore.transactionStatus == 'pending'">
+              <div class="flex-column-center full-width-and-height" v-if="gameStore.transactionStatus == 'pending'">
                 <div class="message">{{ gameStore.transactionMessage }}</div>
               </div>
               <div class="flex-column-center full-width-and-height" v-if="gameStore.transactionStatus == 'error'">
@@ -81,6 +86,9 @@ const goToTen = () => {
       <div id="tenLink" class="flex-row-center">
         MADE POSSIBLE BY <div id="tenImage" class="image" @click="goToTen"></div> ENCRYPTED ROLLUP
       </div>
+      <div id="tenLinkGateway" @click="goToTengateway">
+        TEN GATEWAY
+      </div>
     </div>
   </div>
 </template>
@@ -100,8 +108,9 @@ const goToTen = () => {
 
 #tenLink {
   font-size: 1.5rem;
-  margin: 30px;
+  margin-bottom: 20px;
   min-width: 660px;
+  margin-top: 730px;
 }
 
 #tenImage {
@@ -135,6 +144,7 @@ const goToTen = () => {
   position: relative;
   height: 850px;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
@@ -184,5 +194,14 @@ const goToTen = () => {
   width: 500px;
   height: 500px;
   z-index: 2;
+}
+
+#tenLinkGateway {
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 </style>

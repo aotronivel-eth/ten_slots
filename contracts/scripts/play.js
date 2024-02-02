@@ -1,10 +1,7 @@
 const hre = require("hardhat");
 
-//TEN: 0x20f4b93Db9656Ed2DE6cfcE6b931eac459256f32
-//SATOSHI: 0x748Ccdf1a607b9B2045392b74C0bE8Cbe35C5A09
-
 async function main() {
-  const contractAddress = "0x1887bBf8523785D7e0cB2E70149EFdfcCebdec60";
+  const contractAddress = "0x2DD5E2A0c6d0c4fFBeDf02A9b684e39a43373b9D";
   const BET_AMOUNT = hre.ethers.parseEther("0.00001");
 
   const [player] = await hre.ethers.getSigners();

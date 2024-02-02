@@ -90,6 +90,7 @@ export const useGameStore = defineStore({
                     const houseEdge = await _slotsContract.houseEdge();
                     this.houseEdge = houseEdge;
                 } catch (e) {
+                    console.error(e);
                     this.treasury = null;
                     this.houseEdge = null;
                 }

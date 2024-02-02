@@ -6,7 +6,7 @@ async function main() {
   const Slots = await hre.ethers.getContractFactory("Slots");
   const slots = await Slots.deploy();
   await slots.waitForDeployment();
-  //const slots = Slots.attach("0x1887bBf8523785D7e0cB2E70149EFdfcCebdec60");
+  //const slots = Slots.attach("0x2DD5E2A0c6d0c4fFBeDf02A9b684e39a43373b9D");
   console.log("Slots deployed to:", slots.target, "by account:", player.address);
 
   await slots.provideDevLiquidity({ value: ethers.parseEther("0.01") });
